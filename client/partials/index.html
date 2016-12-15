@@ -1,0 +1,30 @@
+<h3>Register</h3>
+<div ng-controller='registerController'>
+  <form ng-submit="register()">
+    User Name: <input type="text" ng-model = 'user.username' placeholder="your username..."><br>
+    Email: <input type="text" ng-model='user.email' placeholder="your email..."><br>
+    Password: <input type="text" ng-model='user.password' placeholder="your password..."><br>
+    Password Confirmation: <input type="text" ng-model='user.confirm_password' placeholder="confirm password..."><br>
+    <input type="submit" value = 'Register' class='button'>
+  </form>
+
+  <div ng-if="errors" style="background-color: red; color:white; width: 50%; text-align: center; padding: 10px;">
+  	<h3 ng-repeat="error in errors">{{error.message}}</h3>
+  </div>
+
+</div>
+
+
+<h3>Login</h3>
+<div ng-controller='loginController'>
+  <form ng-submit="login()">
+    Email: <input type="text" ng-model='user.email' placeholder="your email..."><br>
+    Password: <input type="text" ng-model='user.password' placeholder="your password..."><br>
+    <input type="submit" value = 'Login' class='button'>
+  </form>
+
+  <div ng-if="errors" style="background-color: red; color:white; width: 50%; text-align: center; padding: 10px;">
+  	<h3 ng-repeat="error in errors">{{error.message}}</h3>
+  </div>
+
+</div>
